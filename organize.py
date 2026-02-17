@@ -4,6 +4,7 @@ import shutil
 from datetime import datetime
 import sys
 import logging
+import platformdirs 
 
 # File Organizer
 
@@ -17,8 +18,7 @@ listOfDirectories = {
 }
 
 print(os.getcwd())
-print(os.getcwdb())
-down = os.chdir('/Users/thehe/Downloads')
+down = os.chdir(platformdirs.user_downloads_path())
 print(os.getcwd())
 
 lisOFilesAndFolderInDownload = os.listdir() #we are currently in download folder
@@ -42,18 +42,4 @@ def structureDownloadFolder():
                             des = os.path.join(os.getcwd(), key , i)
                             shutil.move(p, dst=des)
 
-    # lis = os.listdir()
-    # print(lis)
-    # lis1 = lis.copy()
-    # for i in range(len(lis1)):
-    #     if lis1[i].endswith('.pdf'):
-    #         p = os.path.join(os.getcwd(), lis1[i])
-    #         dst = os.path.join(os.getcwd(), "PDF_Folder", lis1[i])
-    #         shutil.move(p,dst)
-
-if __name__ == "__main__":
-    if len(sys.argv)>1:
-        new_file_path = sys.argv[1]
-        structureDownloadFolder()
-    else:
-        print("Error: No file path provided.")
+structureDownloadFolder()
