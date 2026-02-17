@@ -1,5 +1,5 @@
-import os
-from pathlib import Path
+# import os
+# from pathlib import Path
 
 # print(platformdirs.user_downloads_dir())
 
@@ -13,15 +13,15 @@ from pathlib import Path
 
 
 
-import platformdirs
+# import platformdirs
 
-desktop_dir = platformdirs.user_desktop_dir()
-documents_dir = platformdirs.user_desktop_dir()
-downloads_dir = platformdirs.user_downloads_dir()
-pictures_dir = platformdirs.user_pictures_dir()
-videos_dir = platformdirs.user_videos_dir()
-music_dir = platformdirs.user_music_dir()
-home = Path.home()
+# desktop_dir = platformdirs.user_desktop_dir()
+# documents_dir = platformdirs.user_desktop_dir()
+# downloads_dir = platformdirs.user_downloads_dir()
+# pictures_dir = platformdirs.user_pictures_dir()
+# videos_dir = platformdirs.user_videos_dir()
+# music_dir = platformdirs.user_music_dir()
+# home = Path.home()
 
 
 
