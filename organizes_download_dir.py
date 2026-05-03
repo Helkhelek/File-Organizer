@@ -21,9 +21,9 @@ listOfDirectories = {
     "Applications" : ['.exe']
 }
 
-print(os.getcwd())
+# print(os.getcwd())
 down = os.chdir(platformdirs.user_downloads_path())
-print(os.getcwd())
+# print(os.getcwd())
 
 lisOFilesAndFolderInDownload = os.listdir() #we are currently in download folder
 lis1 = lisOFilesAndFolderInDownload.copy()
@@ -46,4 +46,4 @@ def structureDownloadFolder():
                             des = os.path.join(os.getcwd(), key , i)
                             shutil.move(p, dst=des)
 
-structureDownloadFolder()
+# structureDownloadFolder()
