@@ -3,7 +3,6 @@ from pathlib import Path,PurePath
 import shutil
 from datetime import datetime
 import sys
-import logging
 import platformdirs 
 import logging
 from watchdog.observers import Observer
