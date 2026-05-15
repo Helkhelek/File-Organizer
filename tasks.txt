@@ -1,19 +1,7 @@
-8th, 9th, 10th May 2026
+#16-05-2026
 
-1. Windows File Explores Structure & Looking into drives (One drive, This PC, Network, Gallery & directories) 
-2. Observing upcoming downloads - Observer code
-3. Based on upcoming download redirecting them to their respective directories - organzing code 
-4. Running in the backgroung - Background running code
-5. Informing the user about it - pop-up/notification
-
-
-Expections & bugs
-
------------------------------------------------------------------------------------
-
-6. Rest that doesn't belong to in-built directories - organzing them into downloads.
-7. Custom Organization.
-8. Letting other's use without downloading technical stuff - Publish & testing [Windows] - CLI tool
-9. Exploring All kinds of File Explores - mobile (android / ios), pc (linux,windows, mac, ++) - more than a CLI
-
-building for windows all versions specifically - windows 10 and 11
+1. Observer upcoming download - Watching the download directories for new file creation - DONE [Test again].
+2. Redirect based on their extention to their respective directories  - organizer code
+3. Notifying the user - notification code.
+4. Running this script in backgroung.
+5. Testing | Bug Fixes | Publish

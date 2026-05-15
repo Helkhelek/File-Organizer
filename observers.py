@@ -12,7 +12,7 @@ logging.basicConfig(level=logging.WARNING)
 
 class WATCH(FileSystemEventHandler):
 
-    def on_any_event(self, event):
+    def on_created(self, event):
         logging.warning(f" {event.event_type} {event.src_path}.")
         
     
