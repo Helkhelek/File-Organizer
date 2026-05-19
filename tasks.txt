@@ -1,7 +1,0 @@
-1. Observer upcoming download - Watching the download directories for new file creation - DONE [Test again - DONE].
-2. Redirect based on their extention to their respective directories  - organizer code - DONE
-3. Running this script in backgroung.
-4. Testing | Bug Fixes | Publish -> Letting other's use
-5. Notifying the user - notification code.
-
-Idea - A file organizer that organizes upcoming download files into their respective directories by their extention. 
