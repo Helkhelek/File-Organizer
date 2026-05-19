@@ -13,26 +13,81 @@ video = platformdirs.user_videos_dir()
 downloads = platformdirs.user_downloads_dir()
 pictures = platformdirs.user_pictures_dir()
 
-
-# class Org():
-
-#     def __init__(self, filename, filepath):
-#         self.filename = filename
-#         self.filepath = filepath
-
-#     # todo
-
-list_of_dirs_path = [documents, desktop, music, video, pictures]
-list_of_file_extension = [ ".jpg",".jpeg", ".png",".gif",".webp",".bmp",".tiff",".tif",".svg",".ico",".heic",".raw",".psd",".ai",".avif",".cr2",".cr3",".nef",".arw",".dng"]
+dic_of_dir_extension ={ documents : [
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".txt",
+    ".rtf",
+    ".odt",
+    ".xls",
+    ".xlsx",
+    ".ppt",
+    ".pptx",
+    ".csv",
+    ".json",
+    ".xml",
+    ".yaml",
+    ".yml",
+    ".md"
+],desktop : [
+    ".exe",
+    ".lnk",
+    ".url",
+    ".bat",
+    ".msi",
+    ".app",
+    ".desktop"
+],
+music : [
+    ".mp3",
+    ".wav",
+    ".aac",
+    ".flac",
+    ".ogg",
+    ".wma",
+    ".m4a",
+    ".aiff",
+    ".alac"
+],
+video : [
+    ".mp4",
+    ".mkv",
+    ".avi",
+    ".mov",
+    ".wmv",
+    ".flv",
+    ".webm",
+    ".mpeg",
+    ".mpg",
+    ".3gp"
+],
+pictures : [
+    ".jpg",
+    ".jpeg",
+    ".png",
+    ".gif",
+    ".webp",
+    ".bmp",
+    ".tiff",
+    ".tif",
+    ".svg",
+    ".ico",
+    ".heic",
+    ".raw",
+    ".psd",
+    ".ai",
+    ".avif",
+    ".cr2",
+    ".cr3",
+    ".nef",
+    ".arw",
+    ".dng"
+]}
 
 def Org(filename, filepath):
-    for i in list_of_file_extension:
-        if filename.endswith(i):
-            shutil.move(filepath, dst=pictures)
-            break
-
-
-# def loopOnindividualDir():
-#     pass
-
-Org("download.jpg","C:/Users/thehe/Downloads/download.jpg")
+    for key,value in dic_of_dir_extension.items():
+        for v in value:
+            if filename.endswith(v):
+                shutil.move(filepath, dst=key)
+                break

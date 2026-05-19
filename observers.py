@@ -13,20 +13,16 @@ from organize import Org
 
 logging.basicConfig(level=logging.WARNING)
 
-# path_new_download = ""
 
 class WATCH(FileSystemEventHandler):
        
     def on_created(self, event):
+            time.sleep(2)
+            logging.warning(f" {event.event_type} {event.src_path}.")
+            filename = os.path.basename(event.src_path)
+            Org(filename, event.src_path)
+      
 
-        # global path_new_download 
-        # path_new_download = event.src_path
-
-        filename = os.path.basename(event.src_path)
-
-        Org(filename, event.src_path)
-
-        logging.warning(f" {event.event_type} {event.src_path}.")
         
 
 downloads = platformdirs.user_downloads_dir()  
@@ -40,7 +36,6 @@ observer.start()
 try:
     while True:
         time.sleep(2)
-        # print(path_new_download)
 except KeyboardInterrupt:
         observer.stop()    
         observer.join()  #Wait until the observer thread fully stops before exiting
