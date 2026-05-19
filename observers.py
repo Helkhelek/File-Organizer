@@ -1,14 +1,9 @@
-import sys
 import time
-from pathlib import Path, PurePath
 import logging
-import queue    
-from queue import Queue
 import os
 import platformdirs 
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
-import organizes_download_dir
 from organize import Org
 
 logging.basicConfig(level=logging.WARNING)
