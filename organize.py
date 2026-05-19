@@ -13,7 +13,6 @@ video = platformdirs.user_videos_dir()
 downloads = platformdirs.user_downloads_dir()
 pictures = platformdirs.user_pictures_dir()
 
-download_directory_path = os.chdir(downloads)
 
 # class Org():
 
@@ -23,5 +22,17 @@ download_directory_path = os.chdir(downloads)
 
 #     # todo
 
+list_of_dirs_path = [documents, desktop, music, video, pictures]
+list_of_file_extension = [ ".jpg",".jpeg", ".png",".gif",".webp",".bmp",".tiff",".tif",".svg",".ico",".heic",".raw",".psd",".ai",".avif",".cr2",".cr3",".nef",".arw",".dng"]
+
 def Org(filename, filepath):
-    pass
+    for i in list_of_file_extension:
+        if filename.endswith(i):
+            shutil.move(filepath, dst=pictures)
+            break
+
+
+# def loopOnindividualDir():
+#     pass
+
+Org("download.jpg","C:/Users/thehe/Downloads/download.jpg")
